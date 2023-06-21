@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    margin: 0px;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+}
+
+nav {
+    background-color: gray;
+    padding: 3px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 30px;
+
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+    border-radius: 10px 0px;
+}
+
+h2 {
+    font-size: 1em;
+    color: gray;
+    font-weight: 500;
+}
+
+article {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+article > aside {
+    background-color: gray;
+    font-weight: bold;
+}
+
+aside > p {
+    margin-left: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer > p {
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+/* 
+border-shorthand:
+border-image: url('borda.png') 27 reapeat
+*/

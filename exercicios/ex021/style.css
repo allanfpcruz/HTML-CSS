@@ -1,0 +1,48 @@
+h1 {
+    height: 300px;
+    width: 300px;
+    background-color: lightblue;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /*border-width: 10px;
+    border-style: solid;
+    border-color: cyan;*/
+
+    border: 10px solid cyan; /*border shorthand*/
+
+    /*padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;*/
+
+    padding: 5px 10px; /*padding shorthand (sentido do relógio)
+    4 valores - cima, direito, baixo, esquerda
+    2 valores - cima e baixo, direita e esquerda
+    1 valor- todos os lados
+    */
+
+    /*margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;*/
+
+    margin: 10px auto 20px auto; /*margin shorthand*/
+
+    /*outline-style: dashed;
+    outline-color: blueviolet;*/
+
+    outline: 5px dashed blueviolet;
+    
+}
+
+p{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    border: 5px solid cyan;
+    padding: 3px 5px;
+    outline: 2px dashed blueviolet;
+    color: rgb(6, 54, 70);
+}
