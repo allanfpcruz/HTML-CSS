@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -29,6 +30,18 @@
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        /*grudar o cabeçalho no topo durante a rolagem*/
+        thead > tr > th {
+            position: sticky;
+            top: 42px;
+            background-color: gray;
+        }
+        caption {
+            position: sticky;
+            top: -1px;
+            background-color: lightgray;
         }
 
         td.num {
