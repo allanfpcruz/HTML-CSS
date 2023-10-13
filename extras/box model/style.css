@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin: 10px;
+}
+
+/*elementos block*/
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*elementos inline*/
+span {
+    margin: 10px;
+    padding: 10px;
+} /*não altera verticalmente*/
+
+.inline {
+    display: inline;
+    height: 500px;
+    width: 500px; 
+} /*width e height não são aplicáveis em inline*/
+
+/*----------------------------------------------------------*/
+
+#container {
+    display: flex;
+}
+
+.padrao-alternativo {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    border: 5px solid brown;
+    margin: 50px;
+    padding: 20px;
+}
+
+#alternativo {
+    box-sizing: border-box;
+}

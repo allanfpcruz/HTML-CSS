@@ -1,0 +1,92 @@
+/*seletor universal*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*seletor por tipo*/
+body {
+    background-color: rgb(255, 186, 186);
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: lightcoral;
+    color: darkred;
+} 
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    color: darkred;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+p a {
+    color: black;
+}
+
+/*seletor por classe*/
+.sub-title{
+    font-weight: bold;
+    color: darkred;
+}
+
+p.sub-title {
+    background-color: lightcoral;
+    text-align: center;
+}
+
+.sub-title.important {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+/*seletor por ID*/
+#container {
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+}
+
+/*seletor por atributo*/
+li[class] {
+    background-color: salmon;
+}
+
+li[class~="a"] {
+    background-color: rgb(255, 188, 161);
+}
+
+li[class="a"] {
+    background-color: lightsalmon;
+}
+
+/*pseudo-classes*/
+li:hover {
+    background-color: darkred;
+    color: white;
+}
+
+article p:last-child {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/*pseudo-elementos*/
+p a::after {
+    content: "↩";
+}
+
+
+
+

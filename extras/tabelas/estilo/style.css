@@ -1,0 +1,120 @@
+/*tipografia*/
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+caption {
+    font-family: 'Rock Salt', cursive;
+    font-weight: bolder;
+    padding: 20px;
+    caption-side: top;
+    color: #ff33cc;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+thead th, tfoot th {
+    font-family: 'Rock Salt', cursive;
+}
+
+th {
+    letter-spacing: 2px;
+}
+
+td {
+    letter-spacing: 1px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+/*espaçamento*/
+
+#container {
+    overflow-x: auto;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rebeccapurple;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+} 
+
+thead th:nth-child(3) {
+    width: 15%;
+}
+
+thead th:nth-child(4) {
+    width: 35%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+tbody th, tbody td {
+    border: 1px solid black;
+}
+
+/*imagens e cores*/
+
+thead, tfoot {
+    background-image: url('../imagens/leopardskin.jpg');
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+thead th, tfoot th, tfoot td {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.5));
+    border: 3px solid rebeccapurple;
+}
+
+tbody tr {
+    background-image: url('../imagens/noise.png');
+}
+
+table {
+    background-color: #ff33cc;
+} /*nav que não suportam nth-child*/
+
+/*2n-1 (ímpar) / 2n (par) */
+tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e495e4;
+}
+
+@media screen and (max-width: 768px){
+    table {
+        width: 500px;
+        margin: auto;
+    }
+
+    #container {
+        overflow-x: auto;
+    }
+}
+
+
