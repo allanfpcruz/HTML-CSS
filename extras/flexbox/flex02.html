@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section#flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #flex-row .flex-item {
+            flex: 1 200px;
+            margin: 10px;
+            padding: 10px;
+            background-color: darkgray;
+            color: white;
+        }
+
+        .flex-item:nth-of-type(3) {
+            flex: 5 200px;
+        }
+
+        #flex-column {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        #flex-column .flex-item {
+            flex: 1 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: darkgray;
+            color: white;
+        }
+
+        #align1 {
+            display: flex;
+            flex-flow: row wrap;
+            border: 1px solid black;
+            margin: 10px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        button:nth-of-type(3) {
+            order: 1;
+        }
+
+        #align2 {
+            height: 500px;
+            display: flex;
+            flex-flow: column wrap;
+            border: 1px solid black;
+            margin: 10px;
+            align-items: center; /*mantém o espaço intrínseco*/
+            justify-content:center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FlexBox</h1>
+        <p>Entendendo FlexBox</p>
+    </header>
+    <main>
+        <h2>Flex-row</h2>
+        <section id="flex-row">
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+        </section>
+        <h2>Flex-column</h2>
+        <section id="flex-column">
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+            <div class="flex-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illum at sapiente doloribus. Error tempore animi fugiat iusto reiciendis? Nulla molestiae minus voluptas repellat, necessitatibus blanditiis. Nisi, voluptatum mollitia! Dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nulla amet non rem pariatur ad sapiente, vel quo quidem ab, recusandae enim hic quos fugiat unde voluptas odio sunt porro!</div>
+        </section>
+        <h2>Alinhamento/Justificação</h2>
+        <section id="align1">
+            <button>Smile</button>
+            <button>Laught</button>
+            <button>Wink</button>
+            <button>Shrug</button>
+            <button>Blush</button>
+        </section>
+        <section id="align2">
+            <button>Smile</button>
+            <button>Laught</button>
+            <button>Wink</button>
+            <button>Shrug</button>
+            <button>Blush</button>
+        </section>
+    </main>
+    
+</body>
+</html>
