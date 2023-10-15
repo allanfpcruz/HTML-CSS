@@ -1,0 +1,26 @@
+#container {
+    height: 500px;
+    background-color: lightgray;
+    border: 1px solid darkred;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item {
+    height: 50px;
+    flex: 1 200px;
+    text-align: center;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.item:nth-of-type(2) {
+    flex: 2 200px;
+}
+
+.item:nth-of-type(4) {
+    order: 0;
+}
