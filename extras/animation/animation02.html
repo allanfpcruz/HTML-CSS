@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degrade Animado</title>
+
+    <style>
+        body {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 97vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: bolder;
+            background-image: linear-gradient(to right, #e92525 0%, #d025b9 50%, #6e42d7 100%);
+            background-size: 600% 600%;
+            background-repeat: no-repeat;
+
+            animation: gradient 5s ease-in infinite alternate;
+        }
+
+        h1 {
+            background-color: #141414;
+            padding: 10px;
+        }
+
+        @keyframes gradient{
+            to {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Animation Background</h1>
+    
+</body>
+</html>

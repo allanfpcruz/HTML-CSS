@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Transformers</title>
+    <link rel="icon" href="./img/logo.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .models {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: blue; 
+            color: white;
+            width: 100px; 
+            height: 75px; 
+            transition: 2s;
+        }
+        div p {
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        div.a:hover {
+            transform: translateX(50px);
+        }
+        div.b:hover {
+            transform: translateY(-50px);
+        }
+        div.c:hover {
+            transform: translate(-50px, 50px);
+        }
+        div.d:hover {
+            transform: scaleX(1.5);
+        }
+        div.e:hover {
+            transform: scaleY(.5);
+        }
+        div.f:hover {
+            transform: scale(.5, 1.5);
+        }
+        div.g:hover {
+            transform: rotate(90deg);
+        }
+        div.h:hover {
+            transform: rotateX(180deg);
+        }
+        div.i:hover {
+            transform: rotateY(-180deg);
+        }
+        div.j:hover {
+            transform: rotateZ(-180deg);
+        }
+        div.k:hover {
+            transform: rotate3d(1, 0, 0, 360deg);
+        }
+        div.l:hover {
+            transform: rotate3d(0, 1, 0, 400grad);
+        }
+        div.m:hover {
+            transform: rotate3d(0, 0, 1, 6.284rad);
+        }
+        div.n:hover {
+            transform: rotate3d(1, 1, 1, 1turn);
+        }
+        div.o:hover {
+            transform: skewX(45deg);
+        }
+        div.p:hover {
+            transform: skewY(-45deg);
+        }
+        div.q:hover {
+            transform: skew(-40deg, -20deg);
+        }
+        div.s {
+            transform-origin: left top;
+        }
+        div.t {
+            transform-origin: center bottom;
+        }
+        div.r:hover, div.s:hover, div.t:hover {
+            transform: rotate(360deg);
+        }
+        div.u:hover {
+            transform: rotateX(45deg) translateX(300px);
+            transform-style: preserve-3d;
+        }
+        article.perspective {
+            perspective: 90px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header> 
+        <h1>Usando Transformers</h1>
+    </header>
+
+    <nav>
+        <!--Link opcional-->
+    </nav>
+
+    <main>
+        <section>
+            <header.mainHeader>
+                <h2>Usando a propriedade transform das CSS</h2>
+            </header>
+            <article class="models">
+                <div class="a"><p>Translate X</p></div>
+                <div class="b"><p>Translate Y</p></div>
+                <div class="c"><p>Translate</p></div>
+            </article>
+            <article class="models">
+                <div class="d"><p>Scale X</p></div>
+                <div class="e"><p>Scale Y</p></div>
+                <div class="f"><p>Scale</p></div>
+            </article>
+            <article class="models">
+                <div class="g"><p>Rotate</p></div>
+                <div class="h"><p>Rotate X</p></div>
+                <div class="i"><p>Rotate Y</p></div>
+                <div class="j"><p>Rotate Z</p></div>
+            </article>
+            <article class="models">
+                <div class="k"><p>Rotate 3D X</p></div>
+                <div class="l"><p>Rotate 3D Y</p></div>
+                <div class="m"><p>Rotate 3D z</p></div>
+                <div class="n"><p>Rotate 3D all</p></div>
+            </article>
+            <article class="models">
+                <div class="o"><p>Skew X</p></div>
+                <div class="p"><p>Skew Y</p></div>
+                <div class="q"><p>Skew</p></div>
+            </article>
+            <article class="models">
+                <div class="r"><p>Center</p></div>
+                <div class="s"><p>Left Top</p></div>
+                <div class="t"><p>Center Bottom</p></div>
+            </article>
+            <article class="models perspective">
+                <div class="u"><p>Perspective</p></div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Este material foi desenvolvido por <a href="mailto:webcursoprofessorluis@gmail.com" title="Enviar um e-mail">Luis Vulcanis</a> para o <a href="https://youtube.com/@professorluis" target="_blank" rel="noopener noreferrer">Canal do Prof. Luis Vulcanis</a> &copy; 2023.
+        </address>
+    </footer>
+    
+</body>
+</html>

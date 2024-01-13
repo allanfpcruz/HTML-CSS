@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition CSS</title>
+    <!--REFERENCIA: https://www.joshwcomeau.com/animation/css-transitions/ -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+            display: flex;
+            flex-flow: wrap row;
+            border: 2px solid gray;
+            border-radius: 15px;
+        }
+
+        .element {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /*----------------------------------------------------------*/
+
+
+        #linear {
+            transition: transform 3s linear;
+            will-change: transform; /*resolve possíveis bugs de renderização*/
+        }
+
+        #linear:hover {
+            transform: translateX(30px);
+        }
+
+        #ease {
+            transition: transform 3s ease, opacity 5s ease-in-out;
+            will-change: transform;
+        }
+
+        #ease:hover {
+            transform: translateX(30px);
+            opacity: .5;
+        }
+
+        #ease-in {
+            transition: transform 3s ease-in;
+            will-change: transform;
+        }
+
+        #ease-in:hover {
+            transform: translateX(30px);
+        }
+
+        #ease-out {
+            transition: transform 3s ease-out;
+            will-change: transform;
+        }
+
+        #ease-out:hover {
+            transform: translateX(30px);
+        }
+
+        #ease-in-out {
+            transition: transform 3s ease-in-out;
+            will-change: transform;
+        }
+
+        #ease-in-out:hover {
+            transform: translateX(30px);
+        }  
+
+        #cubic-bezier {
+            transition: transform 3s cubic-bezier(.17,-0.06,.79,1.41); /*https://cubic-bezier.com/#.17,.67,.83,.67*/
+            transition-delay: .5s;
+        }
+
+        #cubic-bezier:hover {
+            transform: translateX(30px);
+            transition: transform 3s cubic-bezier(0, 1.42, 0.83, 0.67);
+            transition-delay: .5s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .btn {
+            transition: none;
+            }
+        } /*permite que retirem as transições*/
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="element" id="linear">linear</div>
+        <div class="element" id="ease">ease</div>
+        <div class="element" id="ease-in">ease-in</div>
+        <div class="element" id="ease-out">ease-out</div>
+        <div class="element" id="ease-in-out">ease-in-out</div>
+        <div class="element" id="cubic-bezier">cubic-bezier</div>
+    </div>
+    
+</body>
+</html>

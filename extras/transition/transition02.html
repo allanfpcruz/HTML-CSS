@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasições</title>
+
+    <style>
+
+        .container {
+            padding: 10px;
+        }
+
+        .box {
+            background-color: #157bad;
+            width: 200px;
+            height: 200px;
+
+            transition: background-color 1s cubic-bezier(.15,.89,.85,.26), border-radius .5s cubic-bezier(.15,.89,.85,.26);
+        }
+
+        .container:hover .box {
+            background-color: #ec5840;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
